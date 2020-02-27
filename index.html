@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang ="en" dir="ltr">
+
+<!-- Explanations and Convention Rules:
+            Convention: Add Comment Line before adding element explaining it's purpose
+                        Leave blank line before and after comment+element block
+            Issue Notice: A second comment line should be placed if there is an issue with the element;
+                          it should have the same name as the task for the issue in ClickUp
+            Adding Resources: Any CSS or JS files should be put in the CSS and JS folders, the
+                              links to the files should be put in the <HEAD> section below under
+                              the named places.
+            Lorem: Ipsum
+-->
+
+<head>
+   <title>Impulse</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!--- CSS Files --->
+   <link rel="stylesheet" type="text/css" href="css/style.css"> 
+   <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+
+   <!--- Javascript Files --->
+   <script type="text/javascript" src="js/scripts.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script>
+       $(document).ready(function() {
+            renderTime();
+        });
+   </script>
+
+   <!-- Custom Browser Icon -->
+   <link rel="icon" type="image/png" sizes="16x16" href="img/webicon1.png">
+
+</head>
+
+    <!-- Renders Clock on Page Load -->
+    <body> 
+        <!-- Fading Background | IMPORTANT: Should Go First -->
+        <div class="crossfade">
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+        </div> 
+        
+        <!-- Clock Display -->
+        <div id="clockDisplay" class = "container" style = "margin-top: 220px; align-content: center;"></div>
+
+        <!-- Greeting and Input Fields -->
+        <div class="container" style="margin-top: 20px; align-content: center;">
+            What is Your Focus for the Day?
+        </div>   
+        <!-- Input Task Field -->
+        <div class="todolist" style="align-items: baseline;">
+            <input type="text" class="txtb" placeholder="Add a task">
+            <div class="notcomp">
+                <p style="font-size:xx-small;">&nbsp;</p>
+                Not Completed
+            </div>
+      
+            <div class="comp">
+              Completed
+            </div>
+          </div>
+
+          <!-- Text List Fading Script -->
+          <script type="text/javascript">
+            $(".txtb").on("keyup",function(e){
+              //13  means enter button
+              if(e.keyCode == 13 && $(".txtb").val() != "")
+              {
+                var task = $("<div class='task'></div>").text($(".txtb").val());
+                var del = $("<i class='fas fa-trash-alt'></i>").click(function(){
+                  var p = $(this).parent();
+                  p.fadeOut(function(){
+                    p.remove();
+                  });
+                });
+      
+                var check = $("<i class='fas fa-check'></i>").click(function(){
+                  var p = $(this).parent();
+                  p.fadeOut(function(){
+                    $(".comp").append(p);
+                    p.fadeIn();
+                  });
+                  $(this).remove();
+                });
+      
+                task.append(del,check);
+                $(".notcomp").append(task);
+                  //to clear the input
+                $(".txtb").val("");
+              }
+            });
+          </script>
+    </body>
+</html>
