@@ -1,0 +1,171 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 18px;
+    overflow: hidden;
+  }
+
+  body {
+    background-color: #000000;
+    min-height: 100vh;
+  }
+  
+  .container .inner{
+    position: fixed;
+    width: 100%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;   
+}
+
+  .container ,inner p{
+    color:#fff;
+    font-size: 45px;
+    text-align: center;
+}
+
+/* #clockDisplay {
+  position: fixed;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+} 
+*/
+
+/* Background Fading Slideshow */
+.crossfade > figure {
+    animation: imageAnimation 70s linear infinite 0s;
+    backface-visibility: hidden;
+    background-size: cover;
+    background-position: center center;
+    color: transparent;
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: -1000;
+  }
+  .crossfade > figure:nth-child(1) { background-image: url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2287&q=80'); }
+
+.crossfade > figure:nth-child(2) {
+  animation-delay: 6s;
+  background-image: url('https://images.unsplash.com/photo-1508612227635-e7cbb9bdf54d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80');
+}
+
+.crossfade > figure:nth-child(3) {
+  animation-delay: 12s;
+  background-image: url('https://images.unsplash.com/photo-1532798369041-b33eb576ef16?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1301&q=80');
+}
+
+.crossfade > figure:nth-child(4) {
+  animation-delay: 18s;
+  background-image: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+}
+
+.crossfade > figure:nth-child(5) {
+  animation-delay: 24s;
+  background-image: url('https://images.unsplash.com/photo-1495225134022-21db12852856?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+}
+
+.crossfade > figure:nth-child(6) {
+  animation-delay: 30s;
+  background-image: url('https://images.unsplash.com/photo-1435224668334-0f82ec57b605?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+}
+
+.crossfade > figure:nth-child(7) {
+  animation-delay: 36s;
+  background-image: url('https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1933&q=80');
+}
+
+.crossfade > figure:nth-child(8) {
+  animation-delay: 42s;
+  background-image: url('https://images.unsplash.com/photo-1468276311594-df7cb65d8df6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+}
+
+.crossfade > figure:nth-child(9) {
+  animation-delay: 48s;
+  background-image: url('https://images.unsplash.com/photo-1516166328576-82e16a127024?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+}
+
+.crossfade > figure:nth-child(10) {
+  animation-delay: 54s;
+  background-image: url('https://images.unsplash.com/photo-1450849608880-6f787542c88a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2466&q=80');
+}
+
+.crossfade > figure:nth-child(11) {
+  animation-delay: 62s;
+  background-image: url('https://images.unsplash.com/photo-1499749143870-d101b3686e3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+}
+
+/* .crossfade > figure:nth-child(10) {
+  animation-delay: 24s;
+  background-image: url('-');
+} */
+
+@keyframes 
+imageAnimation {  0% {
+ animation-timing-function: ease-in;
+ opacity: 0;
+}
+ 8% {
+ animation-timing-function: ease-out;
+ opacity: 1;
+}
+ 17% {
+ opacity: 1
+}
+ 25% {
+ opacity: 0
+}
+ 100% {
+ opacity: 0
+}
+}
+
+/* To Do List CSS */
+.txtb{
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  background: none;
+  padding-bottom: 10px;
+  outline: none;
+  font-size: 18px;
+  color: #fff;
+}
+
+.task{
+  width: 100%;
+  background: rgb(153, 203, 247, 0.5);
+  padding: 18px;
+  margin: 6px 0;
+  overflow: hidden;
+  text-align: left;
+}
+
+.task i{
+  float: right;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.comp .task{
+  background: rgba(34, 34, 34, 0.5);
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  text-align: left;
+}
+
+.todolist{
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+  color:#fff;
+  font-size: 30px;
+  text-align: left;
+}
