@@ -15,11 +15,19 @@ function renderTime(){
     ,"July","Aug","Sept","Oct","Nov","Dec");
     //-----------------------------------------------------------------------
 
-    var currentTime = new Date();
-    var hour = currentTime.getHours();
-    var minute = currentTime.getMinutes();
-    /*var second = currentTime.getSeconds();*/
-      if(hour == 24){
+    //This grabs Unix Time based users IP from an API via a JSON GET
+    $.getJSON('https://worldtimeapi.org/api/ip', function(data){
+    var text = `${data.unixtime}`
+    var ut = text;
+    //Parse returned string to int
+    var unixTime = parseInt(ut);
+    var date = new Date(unixTime * 1000);
+    var hour = date.getHours();
+    var minute = "0" + date.getMinutes();
+    var second = "0" + date.getSeconds();
+     
+    //Not needed
+    /*if(hour == 24){
         hour = 0;
       }else if(hour > 12){
         hour = hour - 0;
@@ -29,17 +37,18 @@ function renderTime(){
       }// adds 0 infront if hours is less then 10;
       if(minute<10){
         minute = "0"+minute;
-      }//^
-      /*if(second<10){
+      }
+      if(second<10){
         second = "0"+second;
-      }//^*/
+      } */
+    
       var myClock = document.getElementById("clockDisplay");
-      var clockTime = "\n" + hour + ":" + minute;
+      var clockTime =  "\n" + hour + ':' + minute.substr(-2) + ':' + second.substr(-2);
       var clockDate = dayArray[day] + " " + dayOfTheMonth + " " + monthArray[month];
       myClock.textContent = clockDate + clockTime;
       myClock.innerText = clockDate + clockTime;
 
-      setTimeout("renderTime()",1000);
-      //function will trigger every 1 second.
-
-}//end renderTime
+      setTimeout(renderTime, 5000);
+      //function will trigger every 5 seconds.
+  
+})};//end renderTime
