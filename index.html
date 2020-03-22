@@ -62,14 +62,15 @@
         </div>   
         <!-- Input Task Field -->
         <div class="todolist" style="align-items: baseline;">
-            <input type="text" class="txtb" placeholder="Add a task">
+             <input type="time" class="txtb1" placeholder="Add a task">
+            <input type="text" class="txtb" placeholder="Add a task" required>
             <div class="notcomp">
                 <p style="font-size:xx-small;">&nbsp;</p>
-                Not Completed
+             <font color="white">Not Completed</font>        
             </div>
       
             <div class="comp">
-              Completed
+              <font color="white">Completed</font> 
             </div>
           </div>
 
@@ -79,8 +80,9 @@
               //13  means enter button
               if(e.keyCode == 13 && $(".txtb").val() != "")
               {
-                var task = $("<div class='task'></div>").text($(".txtb").val());
-                var del = $("<i class='fas fa-trash-alt'></i>").click(function(){
+                  var clock = $("<div class='task'></div>").text($(".txtb").val());
+                  var task =  $("<div class='task1'></div>").text($(".txtb1").val());
+                  var del = $("<i class='fas fa-trash-alt'></i>").click(function(){
                   var p = $(this).parent();
                   p.fadeOut(function(){
                     p.remove();
@@ -95,8 +97,29 @@
                   });
                   $(this).remove();
                 });
+                  
+                  var reh2 = $("<i class='fas fa-undo'></i>").click(function(){
+                      $('.todolist').css("color" , "white",);
+                      p.fadeOut(function(){
+                    $(".comp").append(p);
+                    p.fadeIn();
+                  });
+                  $(this).remove();
+                  });   
+                  
+                  var reh1 = $("<i class='fas fa-exclamation-triangle'></i>").click(function(){
+                      $('.todolist').css("color" , "red");
+                      p.fadeOut(function(){
+                    $(".comp").append(p);
+                    p.fadeIn();
+                  });
+                  $(this).remove();         
+                });
+                  
+                  
+                   
       
-                task.append(del,check);
+                task.append(del,check,clock,reh1,reh2);
                 $(".notcomp").append(task);
                   //to clear the input
                 $(".txtb").val("");
