@@ -137,8 +137,19 @@ imageAnimation {  0% {
   font-size: 18px;
   color: #fff;
 }
+.txtb1{
+  width: 25%;
+  border: none;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  background: transparent;
+  padding-bottom: 10px;
+  outline: none;
+  font-size: 18px;
+  color: #fff;
+}
 
-.task{
+
+.task1{
   width: 100%;
   background: rgb(153, 203, 247, 0.5);
   padding: 18px;
@@ -146,17 +157,22 @@ imageAnimation {  0% {
   overflow: hidden;
   text-align: left;
 }
+.task1:before {
+   content: "Due Time: ";
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
 
-.task i{
+.task1 i{
   float: right;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
 }
 
-.comp .task{
+.comp .task1{
   background: rgba(34, 34, 34, 0.5);
   color: #fff;
-  font-size: 18px;
+  font-size: 14px;
   font-style: normal;
   text-align: left;
 }
