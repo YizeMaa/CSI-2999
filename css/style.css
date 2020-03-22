@@ -161,6 +161,7 @@ imageAnimation {  0% {
    content: "Due Time: ";
     padding-bottom: 20px;
     margin-bottom: 10px;
+    padding-left: 155px;
 }
 
 .task1 i{
@@ -172,7 +173,7 @@ imageAnimation {  0% {
 .comp .task1{
   background: rgba(34, 34, 34, 0.5);
   color: #fff;
-  font-size: 14px;
+  font-size: 18px;
   font-style: normal;
   text-align: left;
 }
