@@ -15,15 +15,20 @@ function renderTime(){
     ,"July","Aug","Sept","Oct","Nov","Dec");
     //-----------------------------------------------------------------------
 
-    //This grabs Unix Time based users IP from an API via a JSON GET
+    //This grabs Unix Time based on the users IP from an API via a JSON GET; Browse the below URL for more detail.
     $.getJSON('https://worldtimeapi.org/api/ip', function(data){
+
+    //getting the value from the "unixtime" JSON object hosted from the API
     var text = `${data.unixtime}`
     var ut = text;
+
     //Parse returned string to int
     var unixTime = parseInt(ut);
     var date = new Date(unixTime * 1000);
     var hour = date.getHours();
     var minute = "0" + date.getMinutes();
+
+    //Uncomment below for seconds. **NOTE** This is updated once every 5 seconds due to limitaions of API requests.
     var second = "0" + date.getSeconds();
      
     //Not needed
@@ -43,7 +48,7 @@ function renderTime(){
       } */
     
       var myClock = document.getElementById("clockDisplay");
-      var clockTime =  "\n" + hour + ':' + minute.substr(-2) + ':' + second.substr(-2);
+      var clockTime =  "\n" + hour + ':' + minute.substr(-2);
       var clockDate = dayArray[day] + " " + dayOfTheMonth + " " + monthArray[month];
       myClock.textContent = clockDate + clockTime;
       myClock.innerText = clockDate + clockTime;
