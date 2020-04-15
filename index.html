@@ -54,24 +54,26 @@
         </div> 
         
         <!-- Clock Display -->
-        <div id="clockDisplay" class = "container" style = "margin-top: 220px; align-content: center;"></div>
+        <div id="clockDisplay" class = "container" style = "margin-left: 1%; margin-top: 1%;"></div>
 
         <!-- Greeting and Input Fields -->
-        <div class="container" style="margin-top: 20px; align-content: center;">
-            What is Your Focus for the Day?
-        </div>   
+        <div class="cont" style="margin-top: 200px; align-content: center; text-align: center;">
+           What is Your Focus for the Day?
+        </div>  
+
         <!-- Input Task Field -->
-        <div class="todolist" style="align-items: baseline;">
-            <input type="text" class="txtb" placeholder="Add a task">
+        <div class="todolist" style="align-items: baseline;">           
+             <input type="text" class="txtb" placeholder="Add a task">
+             <input type="datetime-local" class="txtb1">
             <div class="notcomp">
                 <p style="font-size:xx-small;">&nbsp;</p>
-                Not Completed
-            </div>
-      
+                <p style="font-size:xx-small;">&nbsp;</p>
+             <font color="white">Not Completed</font>        
+            </div>     
             <div class="comp">
-              Completed
+              <font color="white">Completed</font> 
             </div>
-          </div>
+        </div>
 
           <!-- Text List Fading Script -->
           <script type="text/javascript">
@@ -79,8 +81,9 @@
               //13  means enter button
               if(e.keyCode == 13 && $(".txtb").val() != "")
               {
-                var task = $("<div class='task'></div>").text($(".txtb").val());
-                var del = $("<i class='fas fa-trash-alt'></i>").click(function(){
+                  var clock = $("<div class='task'></div>").text($(".txtb").val());
+                  var task =  $("<div class='task1'></div>").text($(".txtb1").val());
+                  var del = $("<i class='fas fa-trash-alt'></i>").click(function(){
                   var p = $(this).parent();
                   p.fadeOut(function(){
                     p.remove();
@@ -95,13 +98,27 @@
                   });
                   $(this).remove();
                 });
-      
-                task.append(del,check);
+
+                  var reh1 = $("<i class='fas fa-exclamation-triangle'></i>").click(function(){
+                      var p = $(this).parent();
+                      $('.todolist').css("color" , "red");
+                });
+
+                task.append(del,check,reh1,clock);
                 $(".notcomp").append(task);
                   //to clear the input
                 $(".txtb").val("");
               }
             });
           </script>
-    </body>
+        
+        <!-- Google News Widget -->
+        <div class = "con" style="margin-right: 88%; margin-top: 80px;">
+          <rssapp-carousel id="dsKo9YS842r1lsZl">
+          </rssapp-carousel>
+          <script src="https://widget.rss.app/v1/carousel.js" type="text/javascript" async>
+          </script>
+        </div>
+            
 </html>
+
