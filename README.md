@@ -34,7 +34,7 @@ The news widget is set to display trending and immediate articles from reputable
 
 ## Tools
 
-* [Visual Studio Code](https://code.visualstudio.com/) - IDEs used
+* [Visual Studio Code](https://code.visualstudio.com/), [Atom](https://atom.io/), [HBuilder](https://dcloud.io/), [Brackets](http://brackets.io/) - IDEs used
 * [ClickUp](https://clickup.com/) - Project Management and Scheduling
 * [GitHub](https://github.com/), [GitHub Pages](https://pages.github.com/) - Project hosting and control
 * [Discord](https://discord.com/), [WhatsApp](https://whatsapp.com/) - Used for project communication and demoing
