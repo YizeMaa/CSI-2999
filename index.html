@@ -34,11 +34,11 @@
 
    <!-- Custom Browser Icon -->
    <link rel="icon" type="image/png" sizes="16x16" href="img/webicon1.png">
-
 </head>
 
     <!-- Renders Clock on Page Load -->
     <body> 
+      <!-- Encapsulates Content as One Element for Loading Screen to Run -->
       <div class = "page"> 
         <!-- Fading Background | IMPORTANT: Should Go First -->
         <div class="crossfade">
@@ -56,7 +56,8 @@
         </div> 
       
         <!-- Clock Display -->
-        <div id="clockDisplay" class = "container" style = "margin-left: 1%; margin-top: 1%;"></div>
+        <div id="clockDisplay" class = "container" style = "margin-left: 1%; margin-top: 1%;">
+        </div>
 
         <!-- Greeting and Input Fields -->
         <div class="cont" style="margin-top: 150px; align-content: center; text-align: center;">
@@ -76,7 +77,6 @@
               <font color="white">Completed</font> 
             </div>
         </div>
-
           <!-- Text List Fading Script -->
           <script type="text/javascript">
             $(".txtb").on("keyup",function(e){
@@ -133,7 +133,8 @@
           <img src="https://img.icons8.com/material/4ac144/256/home.png" width="50" height="50"/>
         </div>
       </div>
-        <!-- Loading -->
-        <div id="loading"></div>
+        
+      <!-- Loading -->
+      <div id="loading"></div>
 </html>
 
