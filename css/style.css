@@ -29,13 +29,22 @@ z-index: -999;
 }
 .cont, in p{
 color: #fff;
-font-size: 45px;
+font-size: 35px;
 }
 
-.con .in{
-float: left;
-z-index: 1000;
-position: sticky;
+.bottomLeft{
+  position: absolute;
+  bottom: 25px;
+  left: 15px;
+}
+
+.bottomRight{
+  all: unset;
+  font-size: 9px;
+  isolation: isolate;
+  position: absolute;
+  bottom: 25px;
+  right: 15px;
 }
 
 /* #clockDisplay {
