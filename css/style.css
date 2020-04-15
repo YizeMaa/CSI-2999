@@ -39,11 +39,18 @@ font-size: 35px;
 }
 
 .bottomRight{
+  position: absolute;
+  bottom: 25px;
+  right: 15px;
+  z-index: -100;
+}
+
+.topRight{
   all: unset;
   font-size: 9px;
   isolation: isolate;
   position: absolute;
-  bottom: 25px;
+  top: 15px;
   right: 15px;
 }
 
@@ -158,8 +165,12 @@ outline: none;
 font-size: 18px;
 color: #fff;
 z-index: -999;
-
 }
+
+::placeholder {
+  color: rgb(95, 141, 160);
+}
+
 .txtb1{
 width: 25%;
 border: none;
@@ -170,9 +181,7 @@ outline: none;
 font-size: 16px;
 color: #fff;
 z-index: -999;
-
 }
-
 
 .task1{
 width: 100%;
@@ -218,4 +227,19 @@ color:#fff;
 font-size: 30px;
 text-align: left;
 z-index: -999;
+}
+
+/* Loading Screen */
+#loading {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  background-image: url("https://media2.giphy.com/media/VseXvvxwowwCc/giphy.gif?cid=ecf05e47d49ca293568e8d1c668fd35f66188d037dbd5362&rid=giphy.gif");
+  background-repeat: no-repeat;
+  background-position: center;
 }

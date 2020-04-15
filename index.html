@@ -30,6 +30,7 @@
             renderTime();
         });
    </script>
+   <script type="text/javascript" src="js/loading.js"></script>
 
    <!-- Custom Browser Icon -->
    <link rel="icon" type="image/png" sizes="16x16" href="img/webicon1.png">
@@ -38,6 +39,7 @@
 
     <!-- Renders Clock on Page Load -->
     <body> 
+      <div class = "page"> 
         <!-- Fading Background | IMPORTANT: Should Go First -->
         <div class="crossfade">
             <figure></figure>
@@ -52,9 +54,7 @@
             <figure></figure>
             <figure></figure>
         </div> 
-        
-       
-
+      
         <!-- Clock Display -->
         <div id="clockDisplay" class = "container" style = "margin-left: 1%; margin-top: 1%;"></div>
 
@@ -123,9 +123,17 @@
         </div>
 
         <!-- Music Player Widget -->
-        <div class = "bottomRight">
+        <div class = "bottomRight" style="visibility: hidden;">
           <script src="https://apps.elfsight.com/p/platform.js" defer></script>
           <div class="elfsight-app-474dc290-028c-4a6c-ac39-68f5f6368fb4"></div>
         </div>
+
+        <!-- Weather Widget -->
+        <div class = "topRight">
+          <img src="https://img.icons8.com/material/4ac144/256/home.png" width="50" height="50"/>
+        </div>
+      </div>
+        <!-- Loading -->
+        <div id="loading"></div>
 </html>
 

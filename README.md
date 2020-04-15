@@ -36,9 +36,10 @@ The news widget is set to display trending and immediate articles from reputable
 
 * [Visual Studio Code](https://code.visualstudio.com/) - IDEs used
 * [ClickUp](https://clickup.com/) - Project Management and Scheduling
-* [GitHub](https://github.com/) - Project hosting and control
+* [GitHub](https://github.com/), [GitHub Pages](https://pages.github.com/) - Project hosting and control
 * [Discord](https://discord.com/), [WhatsApp](https://whatsapp.com/) - Used for project communication and demoing
 * [Google Products](https://google.com/) - Drive, Docs, and Slides were used for organizng project resources, creating project reports, and making project presentations
+* [Unsplash](https://unsplash.com/) - Used for free, high quality images
 
 ## Acknowledgments/Resource Crediting
 
@@ -54,3 +55,4 @@ The news widget is set to display trending and immediate articles from reputable
 * HubSpot
 * CSS Tricks
 * Elfsight Apps
+* PurpleBooth
